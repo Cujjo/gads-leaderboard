@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GADS Leaderboard</string>
+    <string name="title_activity_leaderboard">LEADERBOARD</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="submit">Submit</string>
+    <string name="submit_form_title">Project Submission</string>
+    <string name="learning_tab_title">Learning Leaders</string>
+    <string name="skill_iq_tab_title">Skill IQ Leaders</string>
+    <string name="dummy_name">John Doe</string>
+    <string name="dummy_hours">- learning hours,</string>
+    <string name="dummy_score">- skill IQ Score,</string>
+    <string name="dummy_country">Nigeria</string>
+</resources>
