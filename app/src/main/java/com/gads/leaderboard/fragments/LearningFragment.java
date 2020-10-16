@@ -4,48 +4,63 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.gads.leaderboard.DataViewModel;
 import com.gads.leaderboard.LearningAdapter;
 import com.gads.leaderboard.R;
+import com.gads.leaderboard.datasource.PostClient;
 import com.gads.leaderboard.model.Learning;
 
-import java.util.Objects;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class LearningFragment extends Fragment {
-    DataViewModel dataViewModel;
+    private RecyclerView recyclerView;
+    private LearningAdapter learningAdapter;
+    private ProgressBar progressBar;
+
+    public LearningFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_learning, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_learning, container, false);
+        recyclerView = rootView.findViewById(R.id.learning_recycler);
+        progressBar = rootView.findViewById(R.id.learning_progress);
+        getLearningLeaders();
+        return rootView;
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.learning_recycler);
-        dataViewModel = new ViewModelProvider(this).get(DataViewModel.class);
-        dataViewModel.getLearningList();
+    private void getLearningLeaders() {
+        PostClient.getInstance()
+                .getLearningList()
+                .enqueue(new Callback<List<Learning>>() {
+                    @Override
+                    public void onResponse(Call<List<Learning>> call, Response<List<Learning>> response) {
+                        if (response.isSuccessful()) {
+                            List<Learning> learningList = response.body();
+                            learningAdapter = new LearningAdapter(learningList, getActivity().getApplicationContext());
+                            recyclerView.setAdapter(learningAdapter);
+                            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }
 
-        final LearningAdapter adapter = new LearningAdapter(getContext());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
-
-        dataViewModel.learningMutableData.observe((LifecycleOwner) Objects.requireNonNull(getContext()), new Observer<List<Learning>>() {
-            @Override
-            public void onChanged(List<Learning> postModels) {
-                adapter.setList(postModels);
-            }
-        });
+                    @Override
+                    public void onFailure(Call<List<Learning>> call, Throwable t) {
+                        progressBar.setVisibility(View.VISIBLE);
+                        Toast.makeText(getActivity().getApplicationContext(), "" + t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 }

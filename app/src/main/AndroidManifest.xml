@@ -11,15 +11,22 @@
         android:roundIcon="@mipmap/launcher_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SubmissionDetailsActivity"
-            android:parentActivityName=".LeaderboardActivity"></activity>
-        <activity android:name=".LeaderboardActivity" />
-        <activity android:name=".LaunchActivity">
+
+        <activity android:name=".LaunchActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".SubmissionDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".LeaderboardActivity"
+            android:label="@string/title_activity_leaderboard"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

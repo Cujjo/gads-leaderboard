@@ -9,6 +9,7 @@ import java.util.List;
 
 public class PostClient {
     private LeaderboardService leaderboardService;
+    private static GoogleDocsService googleDocsService;
     private static PostClient instance;
 
     public PostClient() {
@@ -20,6 +21,12 @@ public class PostClient {
         if(instance == null)
             instance = new PostClient();
         return instance;
+    }
+
+    public static GoogleDocsService getGoogleDocs() {
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://docs.google.com/forms/d/e/").addConverterFactory(GsonConverterFactory.create()).build();
+        googleDocsService = retrofit.create(GoogleDocsService.class);
+        return googleDocsService;
     }
 
     public Call<List<Learning>> getLearningList() {

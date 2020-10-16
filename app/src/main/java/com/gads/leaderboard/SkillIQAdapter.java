@@ -15,30 +15,33 @@ import com.bumptech.glide.Glide;
 import com.gads.leaderboard.model.SkillIQ;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class SkillIQAdapter extends RecyclerView.Adapter<SkillIQAdapter.PostViewHolder> {
-    private List<SkillIQ> skillIQList = new ArrayList<>();
+    List<SkillIQ> skillIQList;
     Context context;
 
-    public SkillIQAdapter(Context context) {
+    public SkillIQAdapter(List<SkillIQ> skillIQList, Context context) {
+        this.skillIQList = skillIQList;
         this.context = context;
     }
 
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skill_iq, parent));
+        View skillIQView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skill_iq, parent, false);
+        PostViewHolder postViewHolder = new PostViewHolder(skillIQView);
+        return postViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-        holder.skillIQName.setText(skillIQList.get(position).getName());
-        holder.skillIQScore.setText(MessageFormat.format("{0} skill IQ Score,", skillIQList.get(position).getScore()));
-        holder.skillIQCountry.setText(skillIQList.get(position).getCountry());
-        Glide.with(context).load(skillIQList.get(position).getBadgeUrl()).into(holder.img);
-        Log.d("SkillIQAdapter", "ImageUrl is: " + skillIQList.get(position).getBadgeUrl());
+        SkillIQ current = skillIQList.get(position);
+        holder.skillIQName.setText(current.getName());
+        holder.skillIQScore.setText(MessageFormat.format("{0} skill IQ Score,", current.getScore()));
+        holder.skillIQCountry.setText(current.getCountry());
+        Glide.with(context).load(current.getBadgeUrl()).into(holder.img);
+        // Log.d("SkillIQAdapter", "ImageUrl is: " + current.getBadgeUrl());
     }
 
     @Override
@@ -46,14 +49,9 @@ public class SkillIQAdapter extends RecyclerView.Adapter<SkillIQAdapter.PostView
         return skillIQList.size();
     }
 
-    public void setList(List<SkillIQ> list) {
-        this.skillIQList = list;
-        notifyDataSetChanged();
-    }
-
     public class PostViewHolder extends RecyclerView.ViewHolder {
-        TextView skillIQName, skillIQScore, skillIQCountry;
-        ImageView img;
+        public TextView skillIQName, skillIQScore, skillIQCountry;
+        public ImageView img;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);

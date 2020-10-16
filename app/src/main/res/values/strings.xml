@@ -11,4 +11,12 @@
     <string name="dummy_hours">- learning hours,</string>
     <string name="dummy_score">- skill IQ Score,</string>
     <string name="dummy_country">Nigeria</string>
+    <string name="github_placeholder">Project on GITHUB (link)</string>
+    <string name="email_placeholder">Email Address</string>
+    <string name="first_name_placeholder">First Name</string>
+    <string name="last_name_placeholder">Last Name</string>
+    <string name="submit_yes">Yes</string>
+    <string name="submit_sure">Are you sure</string>
+    <string name="submission_success">Submission Successful</string>
+    <string name="submission_failure">Submission not Successful</string>
 </resources>

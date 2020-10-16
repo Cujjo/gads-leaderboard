@@ -1,19 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_learning.xml.flat",
-        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\fragment_learning.xml"
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_learning_badge.png.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\learning_badge.png"
     },
     {
-        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\mipmap-mdpi\\launcher_icon.png"
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_learning.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\fragment_learning.xml"
     },
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_leaderboard.xml.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\activity_leaderboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_success_icon.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\success_icon.xml"
     },
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_submit_regular.xml.flat",
@@ -28,6 +32,10 @@
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\item_skill_iq.xml"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_button_submit.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\button_submit.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_toolbar_background.png.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\toolbar_background.png"
     },
@@ -40,6 +48,10 @@
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\background.png"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cancel_icon.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\cancel_icon.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_submit_background.xml.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\submit_background.xml"
     },
@@ -48,12 +60,28 @@
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable-xxxhdpi\\background.png"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_modal_submission_success.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\modal_submission_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_submit_form_edit_text_background.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\submit_form_edit_text_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_launch.xml.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\activity_launch.xml"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_leaderboard.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\menu\\menu_leaderboard.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_submit_form_title.xml.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\submit_form_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_button.png.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\back_button.png"
     },
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-ldpi_launcher_icon.png.flat",
@@ -68,6 +96,14 @@
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_failure_icon.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\failure_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_modal_submission_failure.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\modal_submission_failure.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_skill_iq.xml.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\fragment_skill_iq.xml"
     },
@@ -80,6 +116,10 @@
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\mipmap-xhdpi\\launcher_icon.png"
     },
     {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\layout_modal_confirm_submission.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\layout\\modal_confirm_submission.xml"
+    },
+    {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_launcher_icon.png.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\mipmap-hdpi\\launcher_icon.png"
     },
@@ -90,6 +130,14 @@
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background.png.flat",
         "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable-mdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_submit_form_button_background.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\submit_form_button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_yes_button_background.xml.flat",
+        "source": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\src\\main\\res\\drawable\\yes_button_background.xml"
     },
     {
         "merged": "C:\\Users\\Bennet\\Documents\\AndroidDev\\GADSLeaderboard\\app\\build\\intermediates\\res\\merged\\debug\\drawable_skill_iq_badge.png.flat",

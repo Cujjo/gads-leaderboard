@@ -15,30 +15,33 @@ import com.bumptech.glide.Glide;
 import com.gads.leaderboard.model.Learning;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class LearningAdapter extends RecyclerView.Adapter<LearningAdapter.PostViewHolder> {
-    private List<Learning> learningList = new ArrayList<>();
+    List<Learning> learningList;
     Context context;
 
-    public LearningAdapter(Context context) {
+    public LearningAdapter(List<Learning> learningList, Context context) {
+        this.learningList = learningList;
         this.context = context;
     }
 
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_learning, parent));
+        View learningView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_learning, parent, false);
+        PostViewHolder postViewHolder = new PostViewHolder(learningView);
+        return postViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-        holder.learningName.setText(learningList.get(position).getName());
-        holder.learningHours.setText(MessageFormat.format("{0} learning hours,", learningList.get(position).getHours()));
-        holder.learningCountry.setText(learningList.get(position).getCountry());
-        Glide.with(context).load(learningList.get(position).getBadgeUrl()).into(holder.img);
-        Log.d("LearningAdapter", "ImageUrl is: " + learningList.get(position).getBadgeUrl());
+        Learning current = learningList.get(position);
+        holder.learningName.setText(current.getName());
+        holder.learningHours.setText(MessageFormat.format("{0} learning hours,", current.getHours()));
+        holder.learningCountry.setText(current.getCountry());
+        Glide.with(context).load(current.getBadgeUrl()).into(holder.img);
+        // Log.d("LearningAdapter", "ImageUrl is: " + current.getBadgeUrl());
     }
 
     @Override
@@ -46,14 +49,9 @@ public class LearningAdapter extends RecyclerView.Adapter<LearningAdapter.PostVi
         return learningList.size();
     }
 
-    public void setList(List<Learning> list) {
-        this.learningList = list;
-        notifyDataSetChanged();
-    }
-
-    public class PostViewHolder extends RecyclerView.ViewHolder {
-        TextView learningName, learningHours, learningCountry;
-        ImageView img;
+    public static class PostViewHolder extends RecyclerView.ViewHolder {
+        public TextView learningName, learningHours, learningCountry;
+        public ImageView img;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
